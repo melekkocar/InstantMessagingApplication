@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@color/blue"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="com.SmsApp.melek.SmsApp.LoginActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/field_userName_login"
+        android:hint="Kullanıcı Adı"
+
+        android:layout_above="@+id/field_password_login"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/pink"
+        android:textColor="@color/white">
+
+        <requestFocus/>
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/field_password_login"
+        android:hint="Şifre"
+
+        style="@android:style/Animation.Dialog"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColorHint="@color/pink"
+        android:textColor="@color/white" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Giriş Yap"
+        android:id="@+id/button_login"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:background="@color/pink"
+        android:textColor="@color/white"
+        android:layout_below="@+id/field_password_login"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBarLogIn"
+        android:visibility="invisible"
+        android:layout_above="@+id/button_login"
+        android:layout_toRightOf="@+id/button_login"
+        android:layout_toEndOf="@+id/button_login" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Şifremi Unuttum"
+        android:textColor="@color/pink"
+        android:id="@+id/textView_login_forgettingPasswordField"
+        android:textSize="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Kaydol"
+        android:id="@+id/button"
+        android:background="@color/pink"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@+id/button_login"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignRight="@+id/button_login"
+        android:layout_alignEnd="@+id/button_login" />
+
+</RelativeLayout>

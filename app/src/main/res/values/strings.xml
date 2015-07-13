@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Mesh</string>
+
+
+    <string name="title_section1">SOHBET</string>
+    <string name="title_section2">KİŞİLER</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="action_settings">Ayarlar</string>
+    <string name="menu_log_out">Çıkış Yap!</string>
+    <string name="menu_edit_friends">Kişi Düzenle</string>
+    <string name="title_activity_login">Kullanıcı Girişi</string>
+    <string name="hint_userNameField">Kullanıcı Adı</string>
+    <string name="hint_password">Şifre</string>
+    <string name="button_login">Giriş Yap</string>
+    <string name="text_signUp">KAYDOL</string>
+    <string name="title_activity_sign_up">KAYDOL</string>
+    <string name="hint_SignUp_email">E Mail</string>
+    <string name="button_SignUp_signUp">Kaydol</string>
+    <string name="forgetting_password_label_LOGIN">Şifremi Unuttum</string>
+    <string name="title_activity_forget_password">ŞİFREMİ UNUTTUM</string>
+    <string name="hintForEmail_edittrxt_FORGETPASSWORD">email girin</string>
+    <string name="button_text_FORGETPASSWORD">Şifreyi sıfırla</string>
+    <string name="empty_inbox_message">Yeni mesajınız yok!</string>
+    <string name="empty_friends_message">Yeni kişi ekle!</string>
+    <string name="title_activity_edit_friends">Kişi Düzenle</string>
+    <string name="menu_camera_label">Kamera</string>
+    <string name="menu_overflow_title">Seçenekler</string>
+    <string name="error_external_storage">there was a problem accessing your devices external storage!</string>
+    <string name="general_error_forResult">Sorry there was an error :(</string>
+    <string name="video_file_siz_warning">The video size must be less than 10mb</string>
+    <string name="error_file_not_found_exception">There was an error with selected file!</string>
+    <string name="error_file_size_too_large">This selected file is too large! Select a new file!</string>
+
+    <string-array name="camera_choices">
+        <item>Fotoğraf Çek</item>
+        <item>Video Çek</item>
+        <item>Fotoğraf Seç</item>
+        <item>Video Seç</item>
+    </string-array>
+    <string name="title_activity_recipients">Alıcı Seç</string>
+    <string name="empty_recipients_list_message">Choose some friends</string>
+    <string name="menu_item_label_send">Send</string>
+    <string name="dialog_title_fileerror">oops</string>
+    <string name="dialog_message_fileError">There was an error with the file selected. Please select diffrent file!</string>
+    <string name="dialog_buttonLabel_fileError">Ok</string>
+    <string name="sending_message_successfully">Mesajınız Gönderidi!</string>
+    <string name="title_activity_send_message">MESAJ GÖNDER</string>
+    <string name="menu_message_label">Mesaj Göndere</string>
+    <string name="title_activity_view_image">Image</string>
+</resources>

@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.SmsApp.melek.SmsApp.RecipientsActivity">
+
+    <item
+        android:id="@+id/action_send"
+        android:icon="@android:drawable/ic_menu_send"
+        android:orderInCategory="100"
+
+        android:showAsAction="always"
+        android:title="@string/menu_item_label_send"
+        android:visible="false"
+        app:showAsAction="always"
+        />
+</menu>

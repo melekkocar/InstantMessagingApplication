@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.SmsApp.melek.SmsApp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+
+    <permission android:protectionLevel="signature"
+        android:name="com.SmsApp.melek.SmsApp.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.SmsApp.melek.SmsApp.permission.C2D_MESSAGE" />
+
+    <uses-feature
+        android:name="android.hardware.Camera"
+        android:required="true"/>
+
+    <application
+        android:name=".SmsApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Mesh"
+        >
+        <activity
+            android:name="com.SmsApp.melek.SmsApp.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar">
+        </activity>
+        <activity
+            android:name="com.SmsApp.melek.SmsApp.SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:parentActivityName=".LoginActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity"/>
+        </activity>
+        <activity
+            android:name="com.SmsApp.melek.SmsApp.ForgetPasswordActivity"
+            android:label="@string/title_activity_forget_password"
+            android:parentActivityName=".LoginActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity"/>
+        </activity>
+        <activity
+            android:name="com.SmsApp.melek.SmsApp.EditFriendsActivity"
+            android:label="@string/title_activity_edit_friends"
+            android:parentActivityName="com.SmsApp.melek.SmsApp.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.SmsApp.melek.SmsApp.MainActivity"/>
+        </activity>
+        <activity
+            android:name="com.SmsApp.melek.SmsApp.RecipientsActivity"
+            android:label="@string/title_activity_recipients"
+            android:parentActivityName="com.SmsApp.melek.SmsApp.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.SmsApp.melek.SmsApp.MainActivity"/>
+        </activity>
+        <activity
+            android:name="com.SmsApp.melek.SmsApp.SendMessageActivity"
+            android:label="@string/title_activity_send_message"
+            android:parentActivityName="com.SmsApp.melek.SmsApp.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.SmsApp.melek.SmsApp.MainActivity"/>
+        </activity>
+        <activity
+            android:name="com.SmsApp.melek.SmsApp.ViewImageActivity"
+            android:label="@string/title_activity_view_image"
+            android:parentActivityName="com.SmsApp.melek.SmsApp.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.SmsApp.melek.SmsApp.MainActivity"/>
+        </activity>
+
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.ParseBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.SmsApp.melek.SmsApp" />
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>
